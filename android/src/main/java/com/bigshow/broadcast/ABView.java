@@ -17,8 +17,6 @@ public class ABView extends GLSurfaceView {
     }
 
     private void init(){
-        setPreserveEGLContextOnPause(true);
-        setEGLConfigChooser(false);
         setEGLContextClientVersion(2);
     }
 }

@@ -137,7 +137,7 @@ public class ABModule extends ReactContextBaseJavaModule implements  ServiceConn
       this.surfaceView = surface;
       mLiveVideoBroadcaster.init(getCurrentActivity(), surfaceView);
       mLiveVideoBroadcaster.setAdaptiveStreaming(true);
-        mLiveVideoBroadcaster.openCamera(Camera.CameraInfo.CAMERA_FACING_FRONT);
+      mLiveVideoBroadcaster.openCamera(Camera.CameraInfo.CAMERA_FACING_FRONT);
     }
 
     public  void destroySurfaceView() {
