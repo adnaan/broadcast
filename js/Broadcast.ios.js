@@ -3,7 +3,7 @@ import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import PropTypes from 'prop-types';
 import LiveStream from 'rn-live-stream';
 
-export default class Broadcast extends Component<{}> {
+export default class Broadcast extends Component {
 
     constructor(props) {
         super(props);
