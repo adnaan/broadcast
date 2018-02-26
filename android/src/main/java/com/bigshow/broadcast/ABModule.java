@@ -84,6 +84,10 @@ public class ABModule extends ReactContextBaseJavaModule implements  ServiceConn
 
     @ReactMethod
     public void startStream(String rtmpUrl, Promise promise) {
+        if (rtmpUrl == "") {
+            promise.resolve(false);
+            return;
+        }
         promise.resolve(mLiveVideoBroadcaster.startBroadcasting(rtmpUrl));
     }
 
