@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import io.antmedia.android.R;
+import com.bigshow.broadcast.R;
 import io.antmedia.android.broadcaster.encoder.AudioHandler;
 import io.antmedia.android.broadcaster.encoder.CameraSurfaceRenderer;
 import io.antmedia.android.broadcaster.encoder.TextureMovieEncoder;
