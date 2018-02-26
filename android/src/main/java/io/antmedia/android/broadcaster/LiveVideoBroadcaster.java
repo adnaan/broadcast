@@ -67,7 +67,7 @@ public class LiveVideoBroadcaster extends Service implements ILiveVideoBroadcast
     private final IBinder mBinder = new LocalBinder();
     private int currentCameraId= Camera.CameraInfo.CAMERA_FACING_BACK;
 
-    private int frameRate = 20;
+    private int frameRate = 30;
     public static final int PERMISSIONS_REQUEST = 8954;
 
     public final static int SAMPLE_AUDIO_RATE_IN_HZ = 44100;
