@@ -27,7 +27,7 @@ import io.antmedia.android.broadcaster.ILiveVideoBroadcaster;
 import io.antmedia.android.broadcaster.LiveVideoBroadcaster;
 import io.antmedia.android.broadcaster.utils.Resolution;
 
-public class ABModule extends ReactContextBaseJavaModule implements  ServiceConnection {
+public class ABModule extends ReactContextBaseJavaModule implements  ServiceConnection, LifecycleEventListener {
     private ABView surfaceView;
     private boolean isSurfaceCreated;
     private ILiveVideoBroadcaster mLiveVideoBroadcaster;
@@ -145,4 +145,21 @@ public class ABModule extends ReactContextBaseJavaModule implements  ServiceConn
     }
 
 
+    @Override
+    public void onHostResume() {
+        Log.i(TAG,"onHostResume");
+    }
+
+    @Override
+    public void onHostPause() {
+        Log.i(TAG,"onHostPause");
+     if (mLiveVideoBroadcaster != null){
+         mLiveVideoBroadcaster.pause();
+     }
+    }
+
+    @Override
+    public void onHostDestroy() {
+        Log.i(TAG,"onHostDestroy");
+    }
 }
