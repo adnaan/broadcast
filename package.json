@@ -1,0 +1,17 @@
+{
+  "name": "broadcast",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "16.2.0",
+    "react-native": "0.53.0",
+    "rn-live-stream": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnaan/broadcast"
+  },
+  "author": "Adnaan Badr",
+  "license": "MIT"
+}
