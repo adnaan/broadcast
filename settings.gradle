@@ -1,3 +1,0 @@
-include ':liveVideoBroadcasterSDK'
-project(':liveVideoBroadcasterSDK').projectDir = new File(rootProject.projectDir, 'libs/liveVideoBroadcasterSDK')
-include ':android'
