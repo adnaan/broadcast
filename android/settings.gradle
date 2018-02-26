@@ -1,3 +1,0 @@
-include ':app', ':liveVideoBroadcasterSDK'
-
-project(':liveVideoBroadcasterSDK').projectDir = new File(rootProject.projectDir, '../libs/liveVideoBroadcasterSDK')
