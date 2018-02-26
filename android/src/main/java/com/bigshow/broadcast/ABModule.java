@@ -33,7 +33,7 @@ public class ABModule extends ReactContextBaseJavaModule implements  ServiceConn
     private ILiveVideoBroadcaster mLiveVideoBroadcaster;
     private Intent mLiveVideoBroadcasterServiceIntent;
     private Resolution defaultResolution = new Resolution(180,320);
-    private static final String TAG = "bigshow-broadcast";
+    private static final String TAG = "rn-broadcast";
 
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder service) {
@@ -58,6 +58,12 @@ public class ABModule extends ReactContextBaseJavaModule implements  ServiceConn
        // this.surfaceView = surfaceView;
         mLiveVideoBroadcasterServiceIntent = new Intent(getReactApplicationContext(), LiveVideoBroadcaster.class);
         getReactApplicationContext().bindService(mLiveVideoBroadcasterServiceIntent, this, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    public void initialize() {
+        Log.i(TAG,"initialize");
+        getReactApplicationContext().addLifecycleEventListener(this);
     }
 
     @Override
